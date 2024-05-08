@@ -19,6 +19,7 @@ import NewGame from './NewGame'
 import FindPics from './FindPics'
 import Loading from './Loading'
 
+
 import mountain1 from './images/mountain1.jpg';
 import mountain2 from './images/mountain2.jpg';
 import mountain3 from './images/mountain3.jpg';
@@ -174,6 +175,7 @@ const App = () => {
         handlePicSubmit={handlePicSubmit}
         data={data}
         error={error}
+        setError={setError}
         playOffline={playOffline}
       />
 

@@ -1,3 +1,5 @@
+import { fetch } from "@react-native-community/netinfo";
+
 import {
     SafeAreaView,
     ScrollView,
@@ -95,6 +97,14 @@ function FindPics(props) {
     } = props;
 
     const [search, setSearch] = useState()
+
+    fetch().then(state => {
+      console.log("Connection type", state.type);
+      console.log("Is connected?", state.isConnected);
+      if (state.isConnected == false) {
+      setError("true")
+      }
+    });
 
 
     const renderError = () => {
